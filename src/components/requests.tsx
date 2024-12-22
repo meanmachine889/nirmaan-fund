@@ -17,9 +17,9 @@ export default function Requests({ params }: pageProps) {
       try {
         const campaignInstance = getCampaign(resolvedParams.address);
         setCampaign(campaignInstance);
-        const count = await campaignInstance.methods.getRequestsCount().call();
+        const count = await campaignInstance.methods.getRequestsCount().call().toString();
         setRequestCount(parseInt(count));
-        const count1 = await campaignInstance.methods.contributorCount().call();
+        const count1 = await campaignInstance.methods.contributorCount().call().toString();
         setTotalContributors(count1 ? parseInt(count1) : 0);
       } catch (error) {
         console.error("Error fetching campaign:", error);
