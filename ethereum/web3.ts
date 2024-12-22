@@ -15,7 +15,7 @@ if (typeof window !== "undefined" && window.ethereum) {
   web3 = new Web3(window.ethereum);
 } else {
   const provider = new Web3.providers.HttpProvider(
-    process.env.NEXT_PUBLIC_LINK ? process.env.NEXT_PUBLIC_LINK : ""
+    process.env.NEXT_PUBLIC_LINK!
   );
   web3 = new Web3(provider);
 }
