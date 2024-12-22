@@ -15,7 +15,7 @@ if (typeof window !== "undefined" && window.ethereum) {
   web3 = new Web3(window.ethereum);
 } else {
   const provider = new Web3.providers.HttpProvider(
-    process.env.NEXT_PUBLIC_LINK!
+    "https://sepolia.infura.io/v3/e65a06ed75dc4f2992895f07c0efba5f"
   );
   web3 = new Web3(provider);
 }
