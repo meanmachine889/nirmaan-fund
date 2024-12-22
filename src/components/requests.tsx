@@ -17,10 +17,10 @@ export default function Requests({ params }: pageProps) {
       try {
         const campaignInstance = getCampaign(resolvedParams.address);
         setCampaign(campaignInstance);
-        const count = await campaignInstance.methods.getRequestsCount().call().toString();
-        setRequestCount(parseInt(count));
-        const count1 = await campaignInstance.methods.contributorCount().call().toString();
-        setTotalContributors(count1 ? parseInt(count1) : 0);
+        const count = await campaignInstance.methods.getRequestsCount().call();
+        setRequestCount(Number(count));
+        const count1 = await campaignInstance.methods.contributorCount().call();
+        setTotalContributors(count1 ? Number(count1) : 0);
       } catch (error) {
         console.error("Error fetching campaign:", error);
       }
@@ -49,7 +49,7 @@ export default function Requests({ params }: pageProps) {
       <div className="flex flex-col sm:flex-row items-start sm:items-center w-full justify-between sm:justify-start gap-4 sm:gap-9">
         <p className="text-lg sm:text-xl">
           Transaction Requests{" "}
-          <span className="text-gray-400">({requests.length})</span>
+          <span className="text-gray-400">({requests?.length})</span>
         </p>
         <ReqFormDialog params={params} />
       </div>
