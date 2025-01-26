@@ -67,7 +67,7 @@ export default function Navbar() {
   }, []);
 
   return (
-    <div className="fixed z-40 md:bottom-[4vw] bottom-[20vw] sm:bottom-10 w-full px-4 flex justify-center items-center font-[family-name:var(--font-geist-mono)]">
+    <div className="fixed z-40 md:bottom-[4vw] bottom-[20vw] sm:bottom-10 w-full px-4 flex justify-center items-center font-[family-name:var(--font-poppins)]">
       <div className="w-full sm:w-[90%] md:w-[80%] lg:w-[60%] xl:w-[45%] z-40 h-[60px] sm:h-[80px] bg-[#060606] p-2 sm:p-4 items-center rounded-xl border-2 border-[#212121] shadow-sm flex justify-between">
         <WalletButton account={account} handleConnect={handleConnect} />
         <div className="flex gap-2 sm:gap-3">
@@ -77,7 +77,7 @@ export default function Navbar() {
                 <FormDialog/>
               </TooltipTrigger>
               <TooltipContent side="top" className="sm:hidden">
-                New Campaign
+                New Construction Project
               </TooltipContent>
             </Tooltip>
           </TooltipProvider>
@@ -87,12 +87,12 @@ export default function Navbar() {
                 <Link href="/">
                   <Button className="p-2 sm:p-3 shadow-sm bg-[#212121] text-gray-300 hover:bg-gray-800">
                     <LayoutGrid className="h-5 w-5 sm:h-6 sm:w-6" />
-                    <span className="hidden sm:inline ml-2">Campaigns</span>
+                    <span className="hidden sm:inline ml-2">Projects</span>
                   </Button>
                 </Link>
               </TooltipTrigger>
               <TooltipContent side="top" className="sm:hidden">
-                Campaigns
+                Projects
               </TooltipContent>
             </Tooltip>
           </TooltipProvider>

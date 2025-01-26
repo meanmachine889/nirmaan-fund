@@ -59,7 +59,7 @@ export default function ReqFormDialog({ params }: pageProps) {
       <DialogHeader>
         <DialogTitle></DialogTitle>
       </DialogHeader>
-      <DialogContent className="sm:max-w-md md:mx-0 font-[family-name:var(--font-geist-mono)]">
+      <DialogContent className="sm:max-w-md md:mx-0 font-[family-name:var(--font-poppins)]">
         <p className="text-sm text-gray-400 -mb-2">Description</p>
         <div className="flex items-center space-x-2">
           <Input

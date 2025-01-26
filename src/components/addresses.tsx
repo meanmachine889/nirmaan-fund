@@ -43,7 +43,7 @@ const Addresses = () => {
   }, []);
 
   return (
-    <div className="flex mb-[10rem] flex-col gap-4 sm:gap-6 md:gap-9 items-start justify-start min-h-full h-full w-full font-[family-name:var(--font-geist-mono)] p-4 sm:p-6 md:p-9">
+    <div className="flex mb-[10rem] flex-col gap-4 sm:gap-6 md:gap-9 items-start justify-start min-h-full h-full w-full font-[family-name:var(--font-poppins)] p-4 sm:p-6 md:p-9">
       {isLoading ? (
         <div className="w-[100%] h-[100vh] flex items-center justify-center">
           <Loader2 size={24} className="animate-spin text-gray-500" />
@@ -54,11 +54,10 @@ const Addresses = () => {
             campaigns?.map((address: string, index: number) => (
               <Card
                 key={address}
-                className="bg-[#151515] border-2 border-[#212121] flex flex-col"
+                className="bg-[#1d1d1d] border-2 border-[#212121] flex flex-col"
               >
                 <CardHeader className="border-b-2 border-[#212121] p-4">
                   <CardTitle className="font-medium flex gap-2 items-end text-gray-300 text-sm sm:text-base">
-                    <span className="text-xs text-gray-400">({index + 1})</span>
                     <span className="truncate">{names![index]}</span>
                   </CardTitle>
                 </CardHeader>

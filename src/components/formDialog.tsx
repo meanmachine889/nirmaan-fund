@@ -45,13 +45,13 @@ export default function FormDialog() {
       <DialogTrigger asChild>
         <Button className="flex gap-3 items-center shadow-sm bg-[#212121] hover:bg-gray-800 text-gray-300">
           <Plus size={24} />
-          <p>New Campaign</p>
+          <p>New Construction Project</p>
         </Button>
       </DialogTrigger>
       <DialogHeader>
         <DialogTitle></DialogTitle>
       </DialogHeader>
-      <DialogContent className="sm:max-w-md font-[family-name:var(--font-geist-mono)]">
+      <DialogContent className="sm:max-w-md font-[family-name:var(--font-poppins)]">
         <p className="text-sm text-gray-400 -mb-2">Name</p>
         <div className="flex items-center space-x-2">
           <Input
